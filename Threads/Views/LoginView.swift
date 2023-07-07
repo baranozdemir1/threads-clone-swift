@@ -20,40 +20,47 @@ struct LoginView: View {
                         HStack {
                             VStack(alignment: .leading) {
                                 Text("Instagram ile Giriş Yap")
+                                    .font(.system(size: 13))
                                     .foregroundColor(Color(hex: "a4a4a4"))
-                                    .font(.body)
-                                    .fontWeight(.medium)
+                                Spacer().frame(height: 5)
                                 Text("baranozdemir1")
-                                    .fontWeight(.bold)
+                                    .font(.system(size: 12))
+                                    .bold()
                                     .foregroundColor(.black)
+                                
                             }
                             Spacer()
                             Image("instagram-logo")
                                 .resizable()
-                                .frame(width: 50, height: 50)
+                                .frame(width: 30, height: 30)
                         }
                         .padding(.horizontal, 20)
-                        .padding(.vertical, 25)
+                        .padding(.vertical, 15)
                     }
-                    .buttonStyle(PlainButtonStyle())
-                    .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                    .buttonStyle(CustomizeWithPressed())
+                    .frame(maxWidth: .infinity)
+                    .background(Color.clear)
+                    .foregroundColor(Color(hex: "969696"))
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 25)
+                        RoundedRectangle(cornerRadius: 15)
                             .stroke(Color(hex: "d9d9d9"), lineWidth: 1)
                     )
                 }
                 .padding(.horizontal, 30)
                 Spacer(minLength: 20)
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: ChangeAccountView()) {
                     Text("Hesap değiştir")
+                        .multilineTextAlignment(.center)
+                        .font(.system(size: 12))
+                        .padding(.horizontal, 30)
                         .foregroundColor(Color(hex: "a6a6a6"))
-                        .fontWeight(.medium)
                 }
-                Spacer(minLength: 50)
+                Spacer().frame(height: 50)
             }
             .background(Color(hex: "fafafa"))
         }
+        .accentColor(.black)
     }
 }
 
