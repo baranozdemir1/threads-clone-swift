@@ -15,6 +15,7 @@
 		95EC54A02A579833006582CD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC549F2A579833006582CD /* LoginView.swift */; };
 		95EC54A22A584F85006582CD /* ChangeAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC54A12A584F85006582CD /* ChangeAccountView.swift */; };
 		95EC54A42A586082006582CD /* CustomizeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC54A32A586082006582CD /* CustomizeButton.swift */; };
+		95EC54A62A586A9B006582CD /* LoginBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC54A52A586A9B006582CD /* LoginBottomSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		95EC549F2A579833006582CD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		95EC54A12A584F85006582CD /* ChangeAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountView.swift; sourceTree = "<group>"; };
 		95EC54A32A586082006582CD /* CustomizeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeButton.swift; sourceTree = "<group>"; };
+		95EC54A52A586A9B006582CD /* LoginBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				95EC548E2A57974F006582CD /* ContentView.swift */,
 				95EC549F2A579833006582CD /* LoginView.swift */,
 				95EC54A12A584F85006582CD /* ChangeAccountView.swift */,
+				95EC54A52A586A9B006582CD /* LoginBottomSheetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				95EC54A02A579833006582CD /* LoginView.swift in Sources */,
 				95EC548D2A57974F006582CD /* ThreadsApp.swift in Sources */,
 				95EC54A42A586082006582CD /* CustomizeButton.swift in Sources */,
+				95EC54A62A586A9B006582CD /* LoginBottomSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

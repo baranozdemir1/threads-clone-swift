@@ -9,32 +9,33 @@ import SwiftUI
 
 struct LoginView: View {
     @State private var isClicked: Bool = false
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationView {
             VStack {
-                Image("threadsdotnet").resizable().scaledToFill().ignoresSafeArea()
-                Spacer(minLength: 35)
+                Image("threads-login-img").resizable().aspectRatio(contentMode: .fill).frame(width: 575, height: 600).ignoresSafeArea()
+                Spacer(minLength: 100)
                 VStack {
                     Button(action: {}) {
                         HStack {
                             VStack(alignment: .leading) {
                                 Text("Instagram ile Giriş Yap")
                                     .font(.system(size: 13))
-                                    .foregroundColor(Color(hex: "a4a4a4"))
+                                    .foregroundColor(colorScheme == .dark ? Color(hex: "606060") : Color(hex: "a4a4a4"))
                                 Spacer().frame(height: 5)
                                 Text("baranozdemir1")
                                     .font(.system(size: 12))
                                     .bold()
-                                    .foregroundColor(.black)
+                                    .foregroundColor(colorScheme == .dark ? Color.white : .black)
                                 
                             }
                             Spacer()
                             Image("instagram-logo")
                                 .resizable()
-                                .frame(width: 30, height: 30)
+                                .frame(width: 50, height: 50)
                         }
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, 15)
                         .padding(.vertical, 15)
                     }
                     .buttonStyle(CustomizeWithPressed())
@@ -44,7 +45,7 @@ struct LoginView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color(hex: "d9d9d9"), lineWidth: 1)
+                            .stroke(colorScheme == .dark ? Color(hex: "343434") : Color(hex: "d9d9d9"), lineWidth: 1)
                     )
                 }
                 .padding(.horizontal, 30)
@@ -54,13 +55,13 @@ struct LoginView: View {
                         .multilineTextAlignment(.center)
                         .font(.system(size: 12))
                         .padding(.horizontal, 30)
-                        .foregroundColor(Color(hex: "a6a6a6"))
+                        .foregroundColor(colorScheme == .dark ? Color(hex: "606060") : Color(hex: "a6a6a6"))
                 }
                 Spacer().frame(height: 50)
             }
-            .background(Color(hex: "fafafa"))
+            .background(Color("LoginBackground"))
         }
-        .accentColor(.black)
+        .accentColor(colorScheme == .dark ? .white : .black)
     }
 }
 
